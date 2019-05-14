@@ -32,7 +32,6 @@ def HELPf():
     elif hm1 == "start over":
         return Openf()
         
-
 # Error function
 def errorf():
     print("Something went wrong,", a)
@@ -40,7 +39,7 @@ def errorf():
 
 #Opening Function; starts the pathing of Mean and nice
 def Openf():
-    print(a, "? What a nice name! How do you want to be addressed? 'HELP' for more options!")
+    print(a, "? What a nice name! How do you want to be addressed? \n'HELP' for more options!")
     b = input()
     if b == str("mean"):
         return meanmode()
@@ -59,11 +58,11 @@ def meanmode():
     if c == "insult me":
         return insultmef()
     if c == "what are you?":
-        return print(random.choice(whatareyou))
+        return whatareyouf()
     if c == "how are you?":
-        return print(random.choice(howareyou))
+        return howareyouf()
     if c == "why are you mean?":
-        return print(random.choice(whyareyoumean))
+        return whyareyoumeanf()
     elif c != "insult me" or c != "what are you?" or c != "how are you?" or c != "why are you mean?":
         return errorf()
     
@@ -72,13 +71,13 @@ def nicemode():
     print(str("Welcome to Nice Mode friend! Ask me anything! :)"))
     d = input()
     if d == "insult me":
-        return print(random.choice(insultmenice))
+        return insultmenicef()
     if d == "what are you?":
-        return print(random.choice(Whatareyou))
+        return Whatareyouf()
     if d == "how are you?":
-        return print(random.choice(howareyounice))
+        return howareyounicef()
     if d == "why are you mean?":
-        return print(random.choice(makemefeelbetter))
+        return makemefeelbetterf()
     elif d != "insult me" or d != "what are you?" or d != "how are you?" or d != "why are you mean?":
         return errorf()
 
@@ -89,9 +88,50 @@ def insultmef():
     e = input()
     if e != "that hurt":
         return meanmode()
-    elif e == "#":
-        return meanmode()
     
+def whatareyouf():
+    print(random.choice(whatareyou))
+    f = input()
+    if f != "wow":
+        return meanmode()
+
+def howareyouf():
+    print(random.choice(howareyou))
+    g = input()
+    if g != "wow":
+        return meanmode()
+
+def whyareyoumeanf():
+    print(random.choice(whyareyoumean))
+    h = input()
+    if h != "wow":
+        return meanmode()
+
+#---------------------------------------===---------------------------
+
+def insultmenicef():
+    print(random.choice(insultmenice))
+    i = input()
+    if i != "#":
+        return meanmode()
+
+def Whatareyouf():
+    print(random.choice(Whatareyou))
+    j = input()
+    if j != "#":
+        return meanmode()
+
+def howareyounicef():
+    print(random.choice(howareyounice))
+    k = input()
+    if k != "#":
+        return meanmode()
+
+def makemefeelbetterf():
+    print(random.choice(makemefeelbetter))
+    l = input()
+    if l != "#":
+        return meanmode()
 
 #------------------------------------------------------===THE STACK===-----------------------------------------------------------------------------------------   
 print("Hello! My name is ChattyCathy, My life consists of being mean or being nice to you. What is your name?")
